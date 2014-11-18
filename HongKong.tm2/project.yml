@@ -1,8 +1,7 @@
 _prefs: 
+  baselayer: ''
   saveCenter: true
-_properties: 
-  bridge: 
-    "group-by": layer
+_properties: {}
 attribution: "<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>"
 bounds: 
   - -180
@@ -10,19 +9,20 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - 2.3372
-  - 48.8632
-  - 15
+  - 114.1739
+  - 22.2996
+  - 18
 description: ''
 format: "png8:m=h"
 interactivity_layer: ''
 layers: null
-maxzoom: 22
+maxzoom: 18
 minzoom: 0
-name: High Contrast
-source: "mapbox:///mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5"
+name: Loose leaf
+source: "mapbox:///mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v4"
 styles: 
   - style.mss
-  - road.mss
+  - roads.mss
+  - terrain.mss
   - labels.mss
 template: ''

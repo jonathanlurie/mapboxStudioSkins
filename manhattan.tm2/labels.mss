@@ -10,7 +10,7 @@
 // - French: '[name_fr]'
 // - Spanish: '[name_es]'
 // - German: '[name_de]'
-@name: '[name_en]';  
+@name: '[name]';  
 
 
 // ---------------------------------------------------------------------
@@ -356,7 +356,7 @@
     text-placement: line;  // text follows line path
     text-halo-fill: #000;
     text-size: 10;
-    text-character-spacing: 1;
+    text-character-spacing: 0;
     text-avoid-edges: true;  // prevents clipped labels at tile edges
     text-halo-radius: 1;
     text-halo-rasterizer: fast;
@@ -372,19 +372,20 @@
       text-halo-fill: #000;
       }
     [zoom=15] { 
-      text-size: 12;
-      text-halo-radius: 1;
+      text-size: 10;
+      text-halo-radius: 0.75;
       text-fill: #fff;
       text-halo-fill: #000;
+//      text-min-distance: 1;
       }
     [zoom=16] { 
-      text-size: 13;      
+      text-size: 10;      
       text-halo-radius: 1.5;
       text-halo-fill: #000;
       text-fill: #fff;
       }
      [zoom>=17] { 
-      text-size: 13;      
+      text-size: 12;      
       text-halo-radius: 1;
       text-halo-fill: #000;
       text-fill: #fff;
@@ -400,9 +401,9 @@
   text-halo-radius: 0.75;
   text-halo-rasterizer: fast;
   text-size: 8;
-  text-character-spacing: 1.2;
-  text-avoid-edges: true;
-  text-min-distance: 70;
+  text-character-spacing: 0;
+  text-avoid-edges: false;
+  text-min-distance: 0;
   text-allow-overlap: false;
   [zoom>=15] { 
       text-size: 10; 

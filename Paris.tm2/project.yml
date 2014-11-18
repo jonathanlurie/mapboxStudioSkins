@@ -10,17 +10,17 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - 2.3372
-  - 48.8632
-  - 15
+  - 2.3116
+  - 48.867
+  - 16
 description: ''
 format: "png8:m=h"
 interactivity_layer: ''
 layers: null
 maxzoom: 22
 minzoom: 0
-name: High Contrast
-source: "mapbox:///mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5"
+name: OSM Bright 2
+source: "mapbox:///mapbox.mapbox-streets-v5"
 styles: 
   - style.mss
   - road.mss
