@@ -11,7 +11,7 @@
 //@land: #f8f4f0;
 @land: #FFF;
 //@water: #a0c8f0;
-@water: #444;
+@water: #000;
 
 @park : #DDD;
 

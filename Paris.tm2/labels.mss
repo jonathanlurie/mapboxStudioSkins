@@ -210,10 +210,13 @@
     // can use that in our url expression.
     // Not all POIs have a Maki icon assigned, so we limit this section
     // to those that do. See also <https://www.mapbox.com/maki/>
-    marker-fill:#666;
-    marker-file:url('icon/[maki]-12.svg');
+    //marker-fill:#666;
+    //marker-line-color: #FFF;
+    //marker-line-opacity: 1;
+    marker-file:url('icon/[maki]-24.svg');
     // JO:  bigger marker
-    marker-width : 13px;
+  
+    marker-width : 15;
   }
   ::label {
     text-name: @name;
