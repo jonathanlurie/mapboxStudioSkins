@@ -164,7 +164,7 @@
       text-wrap-width: 180;
     }
     // Hide at largest scales:
-    [zoom>=16] { text-name: "''"; }
+    [zoom>=15] { text-name: "''"; }
   }
   [type='town'] {
     text-size: 14;
@@ -280,13 +280,13 @@
   [zoom>=16][area>10000],
   [zoom>=17] {
     text-name: @name;
-    text-face-name: @sans_it;
-    text-fill: darken(@water, 15);
+    text-face-name: @sans;
+    text-fill: lighten(@water, 50);
     text-size: 12;
     text-wrap-width: 100;
     text-wrap-before: true;
-    text-halo-fill: fadeout(#fff, 75%);
-    text-halo-radius: 1.5;
+    //text-halo-fill: #555;
+    //text-halo-radius: 1.5;
   }
 }
 
@@ -297,7 +297,7 @@
 #housenum_label[zoom>=18] {
   text-name: [house_num];
   text-face-name: @sans_it;
-  text-fill: #cba;
+  text-fill: #cbcbcb;
   text-size: 8;
   [zoom=19] { text-size: 10; }
   [zoom>=20] { text-size: 12; }

@@ -13,7 +13,7 @@
 //@water: #a0c8f0;
 @water: #000;
 
-@park : #DDD;
+@park : #f6f6f6;
 
 @building : darken(@land, 50%);
 
@@ -98,7 +98,7 @@ Map {
 
 // ---------------------------------------------------------------------
 // Landuse areas 
-/*
+
 #landuse {
   // Land-use and land-cover are not well-separated concepts in
   // OpenStreetMap, so this layer includes both. The 'class' field
@@ -107,6 +107,7 @@ Map {
   [class='park'] { 
     polygon-fill: @park; 
   }
+  /*
   [class='cemetery'] { 
     polygon-fill:  darken(@building, 80%);
     opacity: 0.05;
@@ -124,8 +125,9 @@ Map {
     opacity: 0.1;
     [class='wood'] { polygon-fill: #6a4; polygon-gamma: 0.5; }
   }
+  */
 }
-*/
+
 // ---------------------------------------------------------------------
 // Buildings 
 

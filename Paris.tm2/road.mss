@@ -4,9 +4,9 @@
 //@street:            #fff;
 //@street_limited:    #f3f3f3;
 
-
-@motorway:          #000;
 @main:              #777;
+@motorway:          darken(@main, 20%);
+
 @street:            #fff;
 @street_limited:    #f3f3f3;
 
@@ -27,7 +27,7 @@
   ::case[zoom>=6]['mapnik::geometry_type'=2] {
     [class='motorway'] {
       line-join:round;
-      line-color: mix(@motorway, #800, 75);
+      line-color: mix(@motorway, #fff, 20);
       #road { line-cap: round; }
       #tunnel { line-dasharray:3,2; }
       [zoom>=6]  { line-width:0.4; }
@@ -126,18 +126,13 @@
       [zoom>=15] { line-width:3.5; }
       [zoom>=16] { line-width:6; }
     }
-    [class='street'][zoom>=15], {
+    [class='street'][zoom>=15], [class='street_limited'][zoom>=15],{
       line-join:round;
       #road, #bridge { line-cap: round; }
-      [zoom>=15] { line-width:2.5; line-color:@main * 0.6; }
-      [zoom>=16] { line-width:2; }
+      [zoom>=15] { line-width:2; line-color:@main * 0.6; }
+
     }
-    [class='street_limited'][zoom>=15], {
-      line-join:round;
-      #road, #bridge { line-cap: round; }
-      [zoom>=15] { line-width:2.5; line-color:#eee; }
-      [zoom>=16] { line-width:4; }
-    }
+ 
     [class='service'][zoom>=16], {
       line-join:round;
       #road, #bridge { line-cap: round; }
