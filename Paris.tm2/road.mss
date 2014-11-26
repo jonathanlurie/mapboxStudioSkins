@@ -50,8 +50,9 @@
       [zoom>=16] { line-width:6.5; }
     }
     [class='main'] {
+     
       line-join:round;
-      line-color: mix(@main, #FFF, 75);
+      line-color:  #d0d0d0;
       #road { line-cap: round; }
       #tunnel { line-dasharray:3,2; }
       [zoom>=6] { line-width:0.2; }
@@ -60,8 +61,8 @@
       [zoom>=10] { line-width:2.4; }
       [zoom>=13] { line-width:2.5; }
       [zoom>=14] { line-width:4; }
-      [zoom>=15] { line-width:5; }
-      [zoom>=16] { line-width:6; }
+      [zoom>=15] { line-width:0; }
+      [zoom>=16] { line-width:0; }
     }
     [class='street'][zoom>=12],[class='street_limited'][zoom>=12] {
       /*
@@ -123,13 +124,14 @@
       [zoom>=10] { line-width:1; }
       [zoom>=13] { line-width:1.5; }
       [zoom>=14] { line-width:2.5; }
-      [zoom>=15] { line-width:3.5; }
+      [zoom>=15] { line-width:3; }
       [zoom>=16] { line-width:6; }
     }
     [class='street'][zoom>=15], [class='street_limited'][zoom>=15],{
       line-join:round;
       #road, #bridge { line-cap: round; }
-      [zoom>=15] { line-width:2; line-color:@main * 0.6; }
+      [zoom>=15] { line-width:1; line-color:@main * 0.6; }
+      [zoom>=16] { line-width:2; line-color:@main * 0.6; }
 
     }
  
@@ -138,9 +140,18 @@
       #road, #bridge { line-cap: round; }
       [zoom>=16] { line-width:2; line-color:#fff; }
     }
-    [class='major_rail'] {
+    [class='major_rail']{
       line-width: 0.4;
       line-color: #bbb;
+      
+      [zoom>=15] {
+        line-width: 0.75;
+      	// Hatching
+      	h/line-width: 2;
+      	h/line-color: #bbb;
+      	h/line-dasharray: 1,16;
+      }
+      
       [zoom>=16] {
         line-width: 0.75;
       	// Hatching
@@ -149,5 +160,26 @@
       	h/line-dasharray: 1,31;
       }
     }
+    
+    [class='minor_rail']{
+      line-width: 0.4;
+      line-color: #d7d7d7;
+      
+      [zoom>=15] {
+        line-width: 0.75;
+
+      }
+      
+      [zoom>=16] {
+        line-width: 0.75;
+      	// Hatching
+      	h/line-width: 3;
+      	h/line-color: #bbb;
+      	h/line-dasharray: 1,31;
+      }
+    }
+    
+    
+    
   }
 }

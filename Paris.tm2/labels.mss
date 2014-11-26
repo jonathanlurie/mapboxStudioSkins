@@ -202,6 +202,7 @@
 #poi_label[zoom=16][scalerank<=3],
 #poi_label[zoom=17][scalerank<=4][localrank<=2],
 #poi_label[zoom>=18] {
+
   // Separate icon and label attachments are created to ensure that
   // all icon placement happens first, then labels are placed only
   // if there is still room.
@@ -215,23 +216,31 @@
     //marker-line-opacity: 1;
     marker-file:url('icon/[maki]-24.svg');
     // JO:  bigger marker
-  
     marker-width : 15;
+    
   }
   ::label {
     text-name: @name;
     text-face-name: @sans_md;
     text-size: 12;
-    text-fill: #666;
+    text-fill: #000000;
     text-halo-fill: fadeout(#fff, 50%);
     text-halo-radius: 1;
     text-halo-rasterizer: fast;
     text-wrap-width: 70;
     text-line-spacing:	-1;
+    
     //text-transform: uppercase;
     //text-character-spacing:	0.25;
     // POI labels with an icon need to be offset:
     [maki!=null] { text-dy: 8; }
+    
+    // JO
+    [type = "Rail Station"]{
+      text-allow-overlap:true;
+      text-dy: 13;
+     }
+    
   }
 }
 
@@ -246,7 +255,7 @@
   // in _src folder
   shield-name: [ref];
   shield-face-name: @sans_bd;
-  shield-fill: #765;
+  shield-fill: #4d4d4d;
   shield-min-distance: 60;
   shield-min-padding: 8;  // prevents clipped shields at tile edges
   shield-size: 9;
@@ -266,7 +275,8 @@
   text-halo-radius: 1;
   text-halo-rasterizer: fast;
   text-size: 12;
-  text-avoid-edges: true;  // prevents clipped labels at tile edges
+  text-avoid-edges: false;  // prevents clipped labels at tile edges
+  //text-allow-overlap: true;
   [zoom>=15] { text-size: 13; }
 }
 
@@ -281,12 +291,12 @@
   [zoom>=17] {
     text-name: @name;
     text-face-name: @sans;
-    text-fill: lighten(@water, 50);
+    text-fill: #ffffff;
     text-size: 12;
     text-wrap-width: 100;
     text-wrap-before: true;
-    //text-halo-fill: #555;
-    //text-halo-radius: 1.5;
+    text-halo-fill: #000000;
+    text-halo-radius: 1.5;
   }
 }
 

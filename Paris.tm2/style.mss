@@ -98,7 +98,6 @@ Map {
 
 // ---------------------------------------------------------------------
 // Landuse areas 
-
 #landuse {
   // Land-use and land-cover are not well-separated concepts in
   // OpenStreetMap, so this layer includes both. The 'class' field
@@ -107,6 +106,11 @@ Map {
   [class='park'] { 
     polygon-fill: @park; 
   }
+  [class='grass'] { 
+    polygon-fill: @park; 
+    
+  }
+  
   /*
   [class='cemetery'] { 
     polygon-fill:  darken(@building, 80%);
