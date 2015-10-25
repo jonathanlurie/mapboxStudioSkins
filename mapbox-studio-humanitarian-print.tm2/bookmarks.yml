@@ -1,0 +1,64 @@
+- place_name: Kalinchok, Kuri Village, Central Region, Nepal
+  zoom: 17
+  center: 
+    - 27.74714
+    - 86.0323
+  tags: 
+    - userbookmark
+  index: 0
+- place_name: Bahrabise, Central Region, Nepal
+  zoom: 16
+  center: 
+    - 27.7848
+    - 85.9008
+  tags: 
+    - userbookmark
+  index: 1
+- place_name: Charikot, Bhimeshwor Municipality, Nepal
+  zoom: 16
+  center: 
+    - 27.6667
+    - 86.0529
+  tags: 
+    - userbookmark
+  index: 2
+- place_name: Larpak, Nepal
+  zoom: 15
+  center: 
+    - 28.2119
+    - 84.8069
+  tags: 
+    - userbookmark
+  index: 3
+- place_name: Barpak, Nepal
+  zoom: 16
+  center: 
+    - 28.2016
+    - 84.7448
+  tags: 
+    - userbookmark
+  index: 4
+- place_name: Kathmandu, Bagmati, Nepal
+  zoom: 15
+  center: 
+    - 27.6749
+    - 85.2783
+  tags: 
+    - userbookmark
+  index: 5
+- place_name: Chasukhel, Nepal
+  zoom: 17
+  center: 
+    - 27.67208
+    - 85.42993
+  tags: 
+    - userbookmark
+  index: 6
+- place_name: Dolakha, Nepal
+  zoom: 18
+  center: 
+    - 27.67795
+    - 86.07402
+  tags: 
+    - userbookmark
+  index: 7

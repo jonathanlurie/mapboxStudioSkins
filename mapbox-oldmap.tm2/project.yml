@@ -1,0 +1,25 @@
+_prefs: 
+  mapid: primalivet.0558d4f6
+  saveCenter: true
+_properties: {}
+attribution: ''
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+center: 
+  - 11.8872
+  - 57.6846
+  - 15
+description: ''
+format: png24
+interactivity_layer: ''
+layers: null
+maxzoom: 18
+minzoom: 0
+name: Old Map
+source: "mapbox:///mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5"
+styles: 
+  - style.mss
+template: ''

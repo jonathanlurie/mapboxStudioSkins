@@ -1,0 +1,21 @@
+- place_name: 55.7395, 7.8223
+  zoom: 5
+  center: 
+    - 55.73948169869349
+    - 7.822265625
+  tags: 
+    - userbookmark
+- place_name: Ouargla, Algeria
+  zoom: 3
+  center: 
+    - 30.221101852485987
+    - 6.50390625
+  tags: 
+    - userbookmark
+- place_name: Zhejiang, China
+  zoom: 10
+  center: 
+    - 29.6093
+    - 121.92349999999999
+  tags: 
+    - userbookmark
