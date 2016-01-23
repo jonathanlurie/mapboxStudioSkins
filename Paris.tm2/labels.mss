@@ -237,7 +237,7 @@
     
     // JO
     [type = "Rail Station"]{
-      text-allow-overlap:true;
+      text-allow-overlap:false;
       text-dy: 13;
      }
     

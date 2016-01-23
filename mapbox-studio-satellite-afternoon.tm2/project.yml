@@ -1,0 +1,27 @@
+_prefs: 
+  saveCenter: true
+_properties: 
+  bridge: 
+    "group-by": layer
+attribution: "<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>"
+bounds: 
+  - -180
+  - -85.0511
+  - 180
+  - 85.0511
+center: 
+  - -108.9624
+  - 39.2833
+  - 6
+description: ''
+format: jpeg95
+interactivity_layer: ''
+layers: null
+maxzoom: 22
+minzoom: 0
+name: Satellite Afternoon
+source: "mapbox:///mapbox.satellite,mapbox.mapbox-terrain-v2,mapbox.mapbox-streets-v6"
+styles: 
+  - style.mss
+  - labels.mss
+template: ''
