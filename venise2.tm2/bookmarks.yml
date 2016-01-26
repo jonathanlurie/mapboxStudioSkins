@@ -1,0 +1,16 @@
+- place_name: Paris, 75004, Paris, France
+  zoom: 16
+  center: 
+    - 48.85275733753064
+    - 2.3500871658325195
+  tags: 
+    - userbookmark
+  index: 0
+- place_name: New York, 10013, New York, United States
+  zoom: 15
+  center: 
+    - 40.71717609748506
+    - -73.99974346160887
+  tags: 
+    - userbookmark
+  index: 1
