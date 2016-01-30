@@ -13,7 +13,7 @@
 //@water: #a0c8f0;
 @water: #000;
 
-@park : #d6d6d6;
+@park : #bbbbbb;
 @forest: darken(@park, 20%);
 
 @building : darken(@land, 50%);
@@ -56,10 +56,10 @@ Map {
 // Water Features 
 
 #water {
-  polygon-fill: @water - #111;
+  polygon-fill: @water;
   // Map tiles are 256 pixels by 256 pixels wide, so the height 
   // and width of tiling pattern images must be factors of 256. 
-  polygon-pattern-file: url(pattern/wave.png);
+  //polygon-pattern-file: url(pattern/wave.png);
   [zoom<=5] {
     // Below zoom level 5 we use Natural Earth data for water,
     // which has more obvious seams that need to be hidden.
@@ -70,11 +70,13 @@ Map {
     // light overlay that is offset slightly south. It also
     // create a slight highlight of the land along the
     // southern edge of any water body.
-    polygon-fill: #f0f0ff;
+    /*
+    polygon-fill: #f0f0f0;
     comp-op: soft-light;
     image-filters: agg-stack-blur(1,1);
     polygon-geometry-transform: translate(0,1);
     polygon-clip: false;
+    */
   }
 }
 
@@ -110,6 +112,9 @@ Map {
   [class='grass'] { 
     polygon-fill: @park; 
     
+  }
+  [class='agriculture'] { 
+    polygon-fill: @park; 
   }
   
   
@@ -149,7 +154,7 @@ Map {
   // At zoom level 13, only large buildings are included in the
   // vector tiles. At zoom level 14+, all buildings are included.
   polygon-fill: @building;
-  opacity: 0.1;
+  opacity: 0.12;
 }
 // Seperate attachments are used to draw buildings with depth
 // to make them more prominent at high zoom levels

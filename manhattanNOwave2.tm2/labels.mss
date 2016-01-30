@@ -190,10 +190,14 @@
     text-transform: uppercase;
     text-character-spacing: 0.5;
     [zoom>=14] { text-size: 11; }
-    [zoom>=15] { text-size: 12; text-character-spacing: 1; }
+    [zoom>=15] { 
+      text-size: 18;
+      text-character-spacing: 0;
+      text-line-spacing: -15;
+    }
     [zoom>=16] { 
       text-halo-radius: 1.5;
-      text-size: 28;
+      text-size: 27;
       text-character-spacing: 0;
       text-line-spacing: -15;
     }
@@ -227,7 +231,7 @@
     marker-line-opacity: 3;
     marker-file:url('icon2/[maki]-24.svg');
     // JO:  bigger marker
-    marker-width : 25;
+    marker-width : 20;
     
     // JO: remove banks, supermarket
     [type = "Bank"],
@@ -238,16 +242,26 @@
     [ type = "Car"],
     [ type = "Department Store"],
     [ type = "Toys"],
-    [ type = "Mobile Phone"]
+    [ type = "Mobile Phone"],
+    [ type = "Fast Food"],
+    [ type = "Cafe"],
+    [ type = "Restaurant"],
+    [ type = "Pub"],
+    [ type = "Convenience"],
+    [ type = "Bar"],
+    [ type = "Shoes"],
+    [ type = "Books"],
     {
       marker-opacity: 0;
-
-      
     }
+    [zoom=16]{
+      marker-width : 30;
+    }
+    
     
   }
   ::label {
-    text-name: @name;
+    text-name: "";//@name;
     text-face-name: @sans_md;
     text-size: 12;
     text-fill: #000000;
@@ -256,7 +270,7 @@
     text-halo-rasterizer: fast;
     text-wrap-width: 70;
     text-line-spacing:	-1;
-    text-allow-overlap: true;
+    text-allow-overlap: false;
     
     //text-transform: uppercase;
     //text-character-spacing:	0.25;
@@ -278,7 +292,15 @@
     [ type = "Car"],
     [ type = "Department Store"],
     [ type = "Toys"],
-    [ type = "Mobile Phone"]
+    [ type = "Mobile Phone"],
+    [ type = "Fast Food"],
+    [ type = "Cafe"],
+    [ type = "Restaurant"],
+    [ type = "Pub"],
+    [ type = "Convenience"],
+    [ type = "Bar"],
+    [ type = "Shoes"],
+    [ type = "Books"],
     {
       text-name: "";
     }
@@ -308,18 +330,19 @@
   }
 }
 
-#road_label {
+#road_label[name != "Golden Gate Bridge"] {
   text-name: @name;
   text-placement: line;  // text follows line path
   text-face-name: @sans_bd;
   text-fill: @main;
   text-halo-fill: #fff;
   text-halo-radius: 1;
-  text-halo-rasterizer: fast;
+  text-halo-rasterizer: full;
   text-size: 12;
   text-avoid-edges: false;  // prevents clipped labels at tile edges
   text-allow-overlap: false;
-  [zoom>=15] { text-size: 21; }
+  [zoom>=15] { text-size: 15; }
+  [zoom>=16] { text-size: 21; }
 }
 
 

@@ -15,7 +15,7 @@
 // - Spanish: '[name_es]'
 // - German: '[name_de]'
 @name: '[name]';  
-@name_en: '[name_en]';  
+@name_en: '[name-en]';  
 
 
 // ---------------------------------------------------------------------
@@ -190,7 +190,11 @@
     text-transform: uppercase;
     text-character-spacing: 0.5;
     [zoom>=14] { text-size: 11; }
-    [zoom>=15] { text-size: 12; text-character-spacing: 1; }
+    [zoom>=15] { 
+      text-size: 18;
+      text-character-spacing: 0;
+      text-line-spacing: -15;
+    }
     [zoom>=16] { 
       text-halo-radius: 1.5;
       text-size: 28;
@@ -256,7 +260,7 @@
     text-halo-rasterizer: fast;
     text-wrap-width: 70;
     text-line-spacing:	-1;
-    text-allow-overlap: true;
+    text-allow-overlap: false;
     
     //text-transform: uppercase;
     //text-character-spacing:	0.25;
@@ -308,18 +312,19 @@
   }
 }
 
-#road_label {
+#road_label[name != "Golden Gate Bridge"] {
   text-name: @name;
   text-placement: line;  // text follows line path
   text-face-name: @sans_bd;
   text-fill: @main;
   text-halo-fill: #fff;
   text-halo-radius: 1;
-  text-halo-rasterizer: fast;
+  text-halo-rasterizer: full;
   text-size: 12;
   text-avoid-edges: false;  // prevents clipped labels at tile edges
   text-allow-overlap: false;
-  [zoom>=15] { text-size: 21; }
+  [zoom>=15] { text-size: 15; }
+  [zoom>=16] { text-size: 21; }
 }
 
 
